@@ -4,12 +4,14 @@ print("*****************************")
 
 secret_number = 42
 total_turns = 3
-current_turn = 1
 
-for turns in range(current_turn, total_turns + 1):
-    print("This is turn {} of {}".format(current_turn, total_turns))
-    guess = int(input("Insert your guess: "))
-    print("You guessed", guess)
+for turn in range(1, total_turns + 1):
+    print("This is turn {} of {}".format(turn, total_turns))
+    guess = int(input("Insert a guess between 1 and 100: "))
+    if(guess < 1 or guess > 100):
+        print("Make a guess inside the range!")
+        continue
+    print("You guessed:", guess)
 
     guessed_right = (guess==secret_number)
     guessed_higher = (guess>secret_number)
@@ -22,6 +24,5 @@ for turns in range(current_turn, total_turns + 1):
         print("You guessed wrong! Your guess is higher than the secret number!")
     elif(guessed_lower):
         print("You guessed wrong! Your guess is lower than the secret number!")
-    
     
 print("End of game")
