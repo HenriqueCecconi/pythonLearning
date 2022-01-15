@@ -5,7 +5,20 @@ print("Welcome to the guessing game!")
 print("*****************************")
 
 secret_number = rdm.randrange(1, 101)
-total_turns = 3
+
+
+print("Choose your difficulty level:")
+print("(1)Easy (2)Medium (3)Hard")
+difficulty_level = int(input("Your choice: "))
+
+if(difficulty_level == 1):
+    total_turns = 20
+elif(difficulty_level == 2):
+    total_turns = 10
+elif(difficulty_level == 3):
+    total_turns = 5
+else:
+    print("Insert a valid difficulty level")
 
 for turn in range(1, total_turns + 1):
     print("This is turn {} of {}".format(turn, total_turns))
