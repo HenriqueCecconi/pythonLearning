@@ -7,7 +7,7 @@ total_turns = 3
 current_turn = 1
 
 while(current_turn <= total_turns):
-    print("This is turn", current_turn, "of", total_turns)
+    print("This is turn {} of {}".format(current_turn, total_turns))
     guess = int(input("Insert your guess: "))
     print("You guessed", guess)
 
