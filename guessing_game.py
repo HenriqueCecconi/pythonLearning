@@ -5,7 +5,7 @@ print("Welcome to the guessing game!")
 print("*****************************")
 
 secret_number = rdm.randrange(1, 101)
-
+points = 1000
 
 print("Choose your difficulty level:")
 print("(1)Easy (2)Medium (3)Hard")
@@ -39,5 +39,9 @@ for turn in range(1, total_turns + 1):
         print("You guessed wrong! Your guess is higher than the secret number!")
     elif(guessed_lower):
         print("You guessed wrong! Your guess is lower than the secret number!")
+
+    lost_points = abs(secret_number - guess)
+    points -= lost_points
     
 print("End of game")
+print("Your got {} points!".format(points))
