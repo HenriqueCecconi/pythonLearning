@@ -46,3 +46,6 @@ def play():
         
     print("End of game")
     print("Your got {} points!".format(points))
+    
+if(__name__ == "__main__"):
+    play()
