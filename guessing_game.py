@@ -6,7 +6,7 @@ secret_number = 42
 total_turns = 3
 current_turn = 1
 
-while(current_turn <= total_turns):
+for turns in range(current_turn, total_turns + 1):
     print("This is turn {} of {}".format(current_turn, total_turns))
     guess = int(input("Insert your guess: "))
     print("You guessed", guess)
@@ -17,11 +17,11 @@ while(current_turn <= total_turns):
 
     if(guessed_right):
         print("Congratulations! You guessed right!")
+        break
     elif(guessed_higher):
         print("You guessed wrong! Your guess is higher than the secret number!")
     elif(guessed_lower):
         print("You guessed wrong! Your guess is lower than the secret number!")
     
-    current_turn += 1
     
 print("End of game")
