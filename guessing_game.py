@@ -7,12 +7,16 @@ secret_number = 42
 guess = int(input("Insert your guess: "))
 print("You guessed", guess)
 
-if(secret_number == guess):
+guessed_right = (guess==secret_number)
+guessed_higher = (guess>secret_number)
+guessed_lower = (guess<secret_number)
+
+if(guessed_right):
     print("You guessed right!")
-elif(secret_number>guess):
-    print("You guessed wrong! The secret number is higher.")
-elif(secret_number<guess):
-    print("You guessed wrong! The secret number is lower.")
+elif(guessed_higher):
+    print("You guessed wrong! Your guess is higher than the secret number!")
+elif(guessed_lower):
+    print("You guessed wrong! Your guess is lower than the secret number!")
     
 
 print("End of game")
