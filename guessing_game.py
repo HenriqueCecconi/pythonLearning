@@ -1,8 +1,10 @@
+import random as rdm
+
 print("*****************************")
 print("Welcome to the guessing game!")
 print("*****************************")
 
-secret_number = 42
+secret_number = rdm.randrange(1, 101)
 total_turns = 3
 
 for turn in range(1, total_turns + 1):
