@@ -7,7 +7,7 @@ print("********************************")
 
 print("(1)Guessing Game  (2)Hangman")
 
-game = int(input("Which game to play?"))
+game = int(input("Which game to play? "))
 
 if(game == 1):
     print("Playing Guessing Game")
