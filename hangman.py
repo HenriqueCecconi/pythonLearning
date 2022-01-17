@@ -24,7 +24,7 @@ def play():
             errors += 1
 
         hanged = (errors == 6)
-        guessed = ("_" not in secret_word)
+        guessed = ('_' not in letters_guessed)
 
     if(guessed):
         print("You win!")
