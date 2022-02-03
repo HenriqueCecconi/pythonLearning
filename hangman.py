@@ -4,7 +4,7 @@ def play():
     print("****************************")
 
     secret_word  = "banana".upper()
-    letters_guessed = ["_", "_", "_", "_", "_", "_"]
+    letters_guessed = ["_" for letter in secret_word]
 
     hanged = False
     guessed = False
@@ -27,9 +27,11 @@ def play():
         guessed = ('_' not in letters_guessed)
 
     if(guessed):
+        print(letters_guessed)
         print("You win!")
     else:
         print("You lose!")
+        print("The secret word was {}".format(secret_word.upper()))
 
     print("End of game")
 
